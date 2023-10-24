@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.jsx';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="m-auto max-[calc(100%-2rem)] text-white text-xl">
+		<Header client:load/>
+		
+	</div>
+</Layout>
