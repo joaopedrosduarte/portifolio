@@ -1,0 +1,12 @@
+---
+import Teste from "../layouts/Teste.astro"
+import TechIcons from "../components/TechIcons";
+import HomeLayout from "../layouts/HomeLayout.astro";
+---
+
+
+<HomeLayout title="template">
+    <div class="text-white flex items-center justify-center w-full h-44">
+        <TechIcons client:load tech={{name: "javascript"}}/>
+    </div>
+</HomeLayout>
