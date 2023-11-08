@@ -13,7 +13,7 @@ export default function About() {
                         <h1 className="uppercase text-green-400 font-semibold text-base">
                             About me
                         </h1>
-                        <h2 className="gap-4 font-bold text-2xl text-white">
+                        <h2 className="font-bold text-2xl text-white">
                             Sou um desenvolvedor full-stack apaixonado pela cultura DevOps e computação em nuvem.
                         </h2>
                     </div>
