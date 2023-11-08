@@ -27,7 +27,7 @@ export default function About() {
     ]
 
     return(
-        <div className="flex flex-col w-full justify-center items-center">
+        <div className="flex w-full justify-center items-center">
             <div className="flex flex-col max-w-5xl items-center px-10 pb-20 rg:pt-[76px] pt-[72px]">
                 <div className="text-center w-full rg:gap-24 gap-4 flex flex-col rg:flex-row justify-between items-center">
                     <div className="flex-1 flex justify-center">
