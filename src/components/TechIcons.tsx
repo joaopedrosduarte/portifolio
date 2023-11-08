@@ -12,8 +12,6 @@ export default function TechIcons({tech}:TechIconsProps) {
 	const controls = useAnimation();
 	const iconUrl = "https://skillicons.dev/icons?i="+tech.name;
 	
-
-
 	return (
 		<>
 			<div className="h-max items-center relative w-max" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>

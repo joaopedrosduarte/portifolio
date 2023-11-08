@@ -29,13 +29,13 @@ export default function About() {
     return(
         <div className="flex flex-col w-full justify-center items-center">
             <div className="flex flex-col max-w-5xl items-center px-10 pb-20 rg:pt-[76px] pt-[72px]">
-                <div className="text-center w-full rg:gap-24 gap-4 flex flex-col rg:flex-row justify-between">
+                <div className="text-center w-full rg:gap-24 gap-4 flex flex-col rg:flex-row justify-between items-center">
                     <div className="flex-1 flex justify-center">
                         <div className="flex h-min border-2 rounded-full">
                             <img className="w-72 h-max object-contain rounded-full" src="/foto-criador2.jpg" alt="Imagem do criador" />
                         </div>
                     </div>
-                    <div className="flex flex-col max-w-lg rg:pr-0 px-8 gap-4 items-center justify-center">
+                    <div className="flex flex-col max-w-lg rg:pr-0 px-8 gap-7 items-center justify-center">
                         <div className="flex flex-col max-w-[592px] gap-2">
                             <h1 className="text-5xl text leading-[4rem] font-semibold rg:text-right">Full-Stack JS Cloud Developer</h1>
                             <div className="flex flex-col justify-center">
@@ -54,15 +54,14 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            
-                <div className="flex flex-col w-full pt-16 gap-8">
+                <div className="flex flex-col w-full pt-16 gap-8 items-center align-middle">
                     <div className="w-full align-middle justify-center flex">
                         <h2 className="w-max text-center">Tech Stacks</h2>
                     </div>
                     <div className="border-l-2 rg:border-0 rg:pl-0 border-lightgray pl-6 gap-8 flex flex-col">
                         <div className="flex-col flex rg:flex-row gap-4 rg:gap-0 justify-center">
                             <h2 className="font-light pr-6 py-2 rg:border-r-2">Web stack</h2>
-                            <div className="grid mb6:grid-cols-10 mb5:grid-cols-9 mb4:grid-cols-8 mb3:grid-cols-7 mb2:grid-cols-6 mb1:grid-cols-5 grid-cols-4 w-max gap-4 rg:pl-4 p-0">
+                            <div className="grid mb6:grid-cols-9 mb5:grid-cols-9 mb4:grid-cols-8 mb3:grid-cols-7 mb2:grid-cols-6 mb1:grid-cols-5 grid-cols-4 w-max gap-4 rg:pl-4 p-0">
                                 {webTechs.map((tech) => {
                                     return(
                                         <TechIcons tech={tech} key={tech.name} />
