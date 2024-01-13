@@ -1,25 +1,23 @@
-
-
 export default function About() {
     return (
         <div className="flex w-full justify-center items-center bg-darkbase">
-            <div className="flex flex-col rg:flex-row max-w-5xl px-10 py-16 gap-6 align-middle">
+            <div className="flex flex-col rg:flex-row max-w-5xl px-10 py-24 gap-6 align-middle">
                 <div className="flex-col flex rounded-lg items-center justify-between">
                     <img src="/alex-knight-j4uuKnN43_M-unsplash.jpg" className="rg:hidden w-full h-full object-cover rounded-lg" alt="foto bonita de um pc ou codigo" />
                     <img src="/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg" className="hidden rg:flex max-w-sm h-full object-cover rounded-lg" alt="foto bonita de um pc ou codigo" />
                 </div>
                 <div className="gap-4 flex-1 flex flex-col justify-between">
-                    <div className="flex flex-col pb-2 gap-1">
-                        <h1 className="uppercase text-green-400 font-semibold text-base">
+                    <div className="flex flex-col pb-2 gap-2">
+                        <h1 className="uppercase text-green-500 font-semibold text-base">
                             About me
                         </h1>
-                        <h2 className="font-bold text-2xl text-white">
+                        <h2 className="font-semibold text-2xl text-white">
                             Sou um desenvolvedor full-stack apaixonado pela cultura DevOps e computação em nuvem.
                         </h2>
                     </div>
                     <div className="flex flex-col gap-2 text-zinc-200 text-base">
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-400 font-semibold text-sm">
+                            <h1 className="text-green-500 font-medium text-sm">
                                 Front-End
                             </h1>
                             <span>
@@ -27,7 +25,7 @@ export default function About() {
                             </span>
                         </div>
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-400 font-semibold text-sm">
+                            <h1 className="text-green-500 font-medium text-sm">
                                 Back-End
                             </h1>
                             <span>
@@ -35,7 +33,7 @@ export default function About() {
                             </span>
                         </div>
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-400 font-semibold text-sm">
+                            <h1 className="text-green-500 font-medium text-sm">
                                 Cultura DevOps e Cloud
                             </h1>
                             <span>

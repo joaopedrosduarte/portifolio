@@ -17,6 +17,10 @@ export default {
 				'mb6': "736px",
 				'rg': '896px',
 			},
+			boxShadow: {
+				'baseblured': "0 0 5px -0.5px rgba(0,0,0,0.3)",
+				'base': "0 0 2px 1px rgba(0,0,0,0.3)"
+			}
 		},
 	},
 	plugins: [],
