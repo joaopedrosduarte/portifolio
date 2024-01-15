@@ -4,9 +4,12 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"darkbase": "#303036",
-				"lightbase": "#27272c",
-				"lightgray": "#A1A1A1"
+				"lightbase": "#303036",
+				"darkbase": "#27272c",
+				"darkmode-bg": "#16181D",
+				"lightgray": "#A1A1A1",
+				"darkmode-maintext": "#E8E8FD",
+				"darkmode-auxiliartext": "#C4C9D4"
 			},
 			screens: {
 				'mb1': "416px",

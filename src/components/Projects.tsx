@@ -5,7 +5,7 @@ export default function Projects() {
         <div className="flex w-full justify-center items-center">
             <div className="flex w-full max-w-5xl flex-col px-10 py-24 gap-8 align-middle">
                 <div className="flex flex-col gap-2 mb4:text-left text-center">
-                    <h1 className="uppercase text-green-500 font-bold text-base">
+                    <h1 className="uppercase text-blue-500 font-bold text-base">
                         Projects
                     </h1>
                     <span className="font-semibold text-2xl pb-4 text-white">

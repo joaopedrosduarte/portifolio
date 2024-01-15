@@ -8,16 +8,16 @@ export default function About() {
                 </div>
                 <div className="gap-4 flex-1 flex flex-col justify-between">
                     <div className="flex flex-col pb-2 gap-2">
-                        <h1 className="uppercase text-green-500 font-semibold text-base">
+                        <h1 className="uppercase text-blue-500 font-semibold text-base">
                             About me
                         </h1>
                         <h2 className="font-semibold text-2xl text-white">
-                            Sou um desenvolvedor full-stack apaixonado pela cultura DevOps e computação em nuvem.
+                            Um desenvolvedor full-stack apaixonado pela cultura DevOps e computação em nuvem.
                         </h2>
                     </div>
                     <div className="flex flex-col gap-2 text-zinc-200 text-base">
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-500 font-medium text-sm">
+                            <h1 className="text-blue-500 font-medium text-sm">
                                 Front-End
                             </h1>
                             <span>
@@ -25,7 +25,7 @@ export default function About() {
                             </span>
                         </div>
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-500 font-medium text-sm">
+                            <h1 className="text-blue-500 font-medium text-sm">
                                 Back-End
                             </h1>
                             <span>
@@ -33,16 +33,16 @@ export default function About() {
                             </span>
                         </div>
                         <div className="flex flex-col gap-1 pb-2">
-                            <h1 className="text-green-500 font-medium text-sm">
+                            <h1 className="text-blue-500 font-medium text-sm">
                                 Cultura DevOps e Cloud
                             </h1>
                             <span>
-                                Por fim, por meio da faculdade e de Ioram Sett, um professor que trabalhou grande parte da carreira na área de DevOps, tive meu primeiro contato com a cultura e foi paixão a primeira vista.
+                                Por fim, por meio de Network dentro do CESAR e do Porto Digital, tive meu primeiro contato com a cultura e foi paixão a primeira vista.
                             </span>
                         </div>
                         <div className="flex flex-col gap-1 pb-2">
                             <span>
-                                Atualmente procuro me especializar na área de cloud e automação de sistemas, e no futuro me tornar um profissional indispensável para o mercado.
+                                Atualmente procuro me especializar na área de cloud e automação, e no futuro me tornar um profissional indispensável para o mercado.
                             </span>
                         </div>
                     </div>
