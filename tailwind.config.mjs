@@ -7,7 +7,7 @@ export default {
 				"lightbase": "#303036",
 				"darkbase": "#27272c",
 				"darkmode-bg": "#16181D",
-				"lightgray": "#A1A1A1",
+				"lightgray": "#C4C9D4",
 				"darkmode-maintext": "#E8E8FD",
 				"darkmode-auxiliartext": "#C4C9D4"
 			},
