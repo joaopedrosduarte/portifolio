@@ -27,7 +27,7 @@ export default function Hero() {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex flex-col max-w-5xl w-full items-center px-10 pb-24 pt-[180px]">
+      <div className="flex flex-col max-w-5xl w-full items-center px-10 pb-24 pt-[200px]">
         <div className="w-full gap-4 flex rg:max-w-none flex-col rg:flex-row justify-between items-center">
           <span>
             <span className="text-4xl text-darkmode-auxiliartext leading-[4rem] font-semibold">
@@ -39,9 +39,9 @@ export default function Hero() {
             </span>
           </span>
         </div>
-        <div className="flex flex-col text-darkmode-maintext w-full pt-28 gap-8 items-center align-middle">
+        <div className="flex flex-col w-full pt-28 gap-8 items-center align-middle">
           <div className="w-full align-middle justify-center flex">
-            <h2 className="w-max text-center pl-[2px] font-medium">Tech Stacks</h2>
+            <h2 className="w-max text-center pl-[2px] font-medium text-darkmode-maintext">Tech Stacks</h2>
           </div>
           <div className="border-l-2 rg:border-0 border-blue-600 rg:pl-0 pl-6 gap-8 flex flex-col">
             <div className="flex-col flex rg:flex-row gap-4 rg:gap-0 justify-center pr-[31px]">
