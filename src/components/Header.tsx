@@ -11,8 +11,8 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className='bg-darkmode-bg shadow-lg w-full py-6 px-10 fixed z-50'>
-            <nav className="flex justify-between">
+        <header className='bg-darkmode-bg shadow-lg w-full py-6 fixed z-50 flex justify-center align-middle'>
+            <nav className="flex justify-between max-w-5xl w-full px-10">
                 <h1>
                     <a href="/">Jpds.dev</a>
                 </h1>
