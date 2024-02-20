@@ -22,7 +22,16 @@ export default {
 			},
 			boxShadow: {
 				'baseblured': "0 0 5px -0.5px rgba(0,0,0,0.3)",
-				'base': "0 0 2px 1px rgba(0,0,0,0.3)"
+				'base': "0 0 2px 1px rgba(0,0,0,0.3)",
+			},
+			animation: {
+				"loop-scroll": "loop-scroll 50s linear infinite",
+			}, 
+			keyframes: {
+				"loop-scroll": {
+					from: { transform: "translateX(0)" },
+					to: { transform: "translateX(-108%)" },
+				}
 			}
 		},
 	},
