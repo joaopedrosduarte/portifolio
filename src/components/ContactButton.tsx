@@ -19,10 +19,10 @@ export default function ContactButton({ component, title, result, link="" }:Cont
                 {component}
             </div>
             <div className="flex flex-col text-base align-middle justify-evenly">
-                <h1 className="text-white font-semibold">
+                <h1 className="text-darkmode-maintext font-semibold">
                     {title}
                 </h1>
-                <a className="text-lightgray hover:text-blue-400 decoration-1 decoration-solid decoration-blue-400" href="">
+                <a className="text-darkmode-auxiliartext hover:text-blue-400 decoration-1 decoration-solid decoration-blue-400" href="">
                     {result}
                 </a>
             </div>
