@@ -4,15 +4,15 @@ export default function Hero() {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex flex-col max-w-6xl w-full items-center px-10 pt-60 pb-40">
-        <div className="w-full gap-12 flex flex-col justify-between items-center">
-          <span>
+      <div className="flex flex-col max-w-5xl w-full items-center px-10 pt-60 pb-40">
+        <div className="w-full gap-10 flex flex-col justify-between items-center">
+          <span className="flex flex-col gap-3">
             <span className="text-4xl text-darkmode-auxiliartext leading-[4rem] font-semibold">
-              Eae tudo certo?{" "}
+              Eae tudo certo? 👋🏼 {" "}
             </span>
-            <span className="text-4xl text-darkmode-maintext leading-[4rem] font-semibold">
-              Sou João Pedro Duarte. Entusiasta da tecnologia desde pequeno e na
-              procura de ingressar no mercado da tecnologia!
+            <span className="text-3xl text-darkmode-maintext leading-[3.2rem] font-semibold">
+              Sou João Pedro Duarte, um brasileiro 🇧🇷 entusiasta da tecnologia desde pequeno 🚀 e na
+              procura de ingressar no mercado como desenvolvedor Full-Stack. 👨‍💻
             </span>
           </span>
           <div className="w-full flex justify-between align-middle">

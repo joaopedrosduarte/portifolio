@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <header className='bg-darkmode-bg shadow-lg w-full py-6 fixed z-50 flex justify-center align-middle'>
-            <nav className="flex justify-between max-w-6xl w-full px-10">
+            <nav className="flex justify-between max-w-5xl w-full px-10">
                 <h1>
                     <a href="/">Jpds.dev</a>
                 </h1>
