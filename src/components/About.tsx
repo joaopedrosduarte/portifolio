@@ -5,7 +5,7 @@ export default function About() {
     { name: "typescript" },
     { name: "javascript" },
     { name: "react" },
-    //{ name: "nextjs" },
+    { name: "nextjs" },
     { name: "nodejs" },
     { name: "express" },
     { name: "python" },
