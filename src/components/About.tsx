@@ -1,4 +1,3 @@
-import InfinityScroll from "./InfinityScroll";
 import TechStacks from "./TechStacks";
 
 export default function About() {
@@ -28,7 +27,7 @@ export default function About() {
 
   return (
     <div className="flex max-h-fit justify-center items-center bg-darkbase">
-      <div className="flex max-w-6xl flex-col items-center py-24 px-10">
+      <div className="flex max-w-5xl flex-col items-center py-24 px-10">
         <div className="flex rg:flex-row flex-col gap-20 h-max">
           <div className="flex h-auto">
             <img
