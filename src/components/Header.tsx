@@ -7,7 +7,7 @@ export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isHeaderMinimized, setIsHeaderMinimized] = useState(false);
   function handleScroll() {
-    if (window.scrollY > 76) {
+    if (window.scrollY > 86) {
       setIsHeaderMinimized(true);
     } else {
       setIsHeaderMinimized(false);
