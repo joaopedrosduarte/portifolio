@@ -12,9 +12,9 @@ import Footer from '../components/Footer.jsx';
 	<div class="m-auto max-[calc(100%-2rem)] text-white text-xl">
 		<Header client:load/>
 		<main class="w-full">
-			<Hero />
+			<Hero client:only/>
 			<About client:load/>
-			<Projects client:load/>
+			<Projects />
 			<Contact />
 		</main>
 		<Footer />
