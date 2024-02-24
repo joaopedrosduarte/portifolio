@@ -9,8 +9,6 @@ export default function Hero() {
     });
   });
 
-  
-
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex flex-col max-w-5xl w-full items-center px-10 pt-52 pb-48">
@@ -26,7 +24,7 @@ export default function Hero() {
             </span>
           </span>
           <div className="w-full flex mb3:flex-row flex-col gap-5 justify-between align-middle">
-            <button className="px-4 py-3 transition-all justify-center items-center bg-blue-600 duration-300 hover:shadow-blue-600 hover:shadow-[0px_2px_40px_-4px] rounded-lg flex gap-2">
+            <button className="px-4 py-3 transition-all justify-center items-center bg-blue-600 duration-200 hover:shadow-blue-700 hover:shadow-shinny rounded-lg flex gap-2">
               <p className="font-medium mb4:text-base text-sm text-darkmode-maintext">
                 Resume.pdf
               </p>

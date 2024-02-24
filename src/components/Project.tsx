@@ -23,7 +23,6 @@ export default function Project({projectTitle, projectDescription, projectImage,
                 </div>
                 <button onClick={() => console.log("A")} className="hover:text-blue-400 transition-colors duration-300 text-base">
                     Saiba mais
-                    {/** #2d2e32 */}
                 </button>
             </div>
         </div>
