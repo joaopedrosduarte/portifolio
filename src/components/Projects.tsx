@@ -1,7 +1,7 @@
 import Project from "./Project";
 
 export default function Projects() {
-  const projects = [];
+  const projects = [1];
   return (
     <div className="flex w-full justify-center items-center">
       <div className="flex w-full max-w-6xl flex-col px-10 py-24 gap-8 align-middle">
@@ -13,7 +13,6 @@ export default function Projects() {
           </div>
         ) : (
           <>
-            {/* FAZER UM MAP RELACIONADO COM O BANCO */}
             <div className="flex flex-col gap-2 mb4:text-left text-center">
               <h1 className="uppercase text-blue-500 font-bold text-base">
                 Projects
@@ -23,19 +22,13 @@ export default function Projects() {
               </span>
             </div>
             <div className="flex flex-col gap-16 items-center">
+              {/* FAZER UM MAP RELACIONADO COM O BANCO */}
               <Project
                 ghLink="#"
                 projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque debitis error illo quia quisquam accusamus. Iusto impedit quis libero, veritatis non exercitationem soluta eaque eius! Magnam neque odio earum?"
                 projectImage="#"
                 projectLink="miau"
                 projectTitle="Projeto 1"
-              />
-              <Project
-                ghLink="#"
-                projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque debitis error illo quia quisquam accusamus. Iusto impedit quis libero, veritatis non exercitationem soluta eaque eius! "
-                projectImage="#"
-                projectLink="miau"
-                projectTitle="Projeto 2"
               />
             </div>
           </>
