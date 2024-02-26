@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Project A",
-      "short_description": "A web application for task management",
+      "description": "A web application for task management",
       "info_page": [
         {
           "type": "text",
@@ -13,12 +13,15 @@
           "type": "image",
           "content": "https://example.com/projectA/image2.png"
         }
-      ]
+      ],
+      "github_link": "https://github.com/username/projectA",
+      "demo_link": "https://demo.projectA.com",
+      "background_color": "#3498db"
     },
     {
       "id": 2,
       "name": "Project B",
-      "short_description": "Mobile app for language learning",
+      "description": "Mobile app for language learning",
       "info_page": [
         {
           "type": "text",
@@ -28,12 +31,15 @@
           "type": "image",
           "content": "https://example.com/projectB/image1.png"
         }
-      ]
+      ],
+      "github_link": "https://github.com/username/projectB",
+      "demo_link": "https://demo.projectB.com",
+      "background_color": "#2ecc71"
     },
     {
       "id": 3,
       "name": "Project C",
-      "short_description": "E-commerce platform",
+      "description": "E-commerce platform",
       "info_page": [
         {
           "type": "text",
@@ -51,7 +57,10 @@
           "type": "image",
           "content": "https://example.com/projectC/image2.png"
         }
-      ]
+      ],
+      "github_link": "https://github.com/username/projectC",
+      "demo_link": "https://demo.projectC.com",
+      "background_color": "#e74c3c"
     }
   ]
 }

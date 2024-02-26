@@ -28,17 +28,12 @@ export default function About() {
   return (
     <div className="flex max-h-fit justify-center items-center bg-darkbase">
       <div className="flex max-w-5xl flex-col items-center py-24 px-10">
-        <div className="flex rg:flex-row flex-col gap-20 h-max">
-          <div className="flex h-auto">
-            <img
-              src="/alex-knight-j4uuKnN43_M-unsplash.jpg"
-              className="rg:hidden w-full object-cover rounded-lg"
-              alt="pcfoto1"
-            />
+        <div className="flex rg:flex-row gap-20 flex-col h-max">
+          <div className="rg:flex hidden h-auto">
             <img
               src="/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg"
               className="object-cover max-w-sm hidden rg:flex rounded-lg"
-              alt="pcfoto2"
+              alt="pcfoto1"
             />
           </div>
           <div className="flex flex-col gap-4 h-max text-darkmode-maintext text-lg">

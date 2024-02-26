@@ -21,7 +21,7 @@ export default {
 				'rg': '896px',
 			},
 			boxShadow: {
-				'baseblured': "0 0 5px -0.5px rgba(0,0,0,0.3)",
+				'baseblured': "0 0 10px -1px",
 				'shinny': "0px 2px 40px -2px",
 				'base': "0 0 2px 1px rgba(0,0,0,0.3)",
 			},
