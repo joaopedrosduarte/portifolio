@@ -24,7 +24,7 @@ export default function About() {
     { name: "bash" },
     { name: "linux" },
   ];
-
+``
   return (
     <div className="flex max-h-fit justify-center items-center bg-darkbase">
       <div className="flex max-w-5xl flex-col items-center py-24 px-10">
