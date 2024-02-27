@@ -1,0 +1,66 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "Project A",
+      "description": "A web application for task management",
+      "info_page": [
+        {
+          "type": "text",
+          "content": "Project A is a modern web application designed for efficient task management. Key features include user-friendly interface, task creation and assignment, real-time collaboration, and progress tracking. This project is built using the latest technologies such as React for the frontend and Node.js for the backend. It aims to streamline team collaboration and enhance productivity."
+        },
+        {
+          "type": "image",
+          "content": "https://example.com/projectA/image2.png"
+        }
+      ],
+      "github_link": "https://github.com/username/projectA",
+      "demo_link": "https://demo.projectA.com",
+      "background_color": "#3498db"
+    },
+    {
+      "id": 2,
+      "name": "Project B",
+      "description": "Mobile app for language learning",
+      "info_page": [
+        {
+          "type": "text",
+          "content": "Project B is a mobile application designed to make language learning enjoyable and interactive. Main features include gamified learning modules, speech recognition for pronunciation practice, and progress analytics. The app is built using the Flutter framework to ensure a smooth cross-platform experience."
+        },
+        {
+          "type": "image",
+          "content": "https://example.com/projectB/image1.png"
+        }
+      ],
+      "github_link": "https://github.com/username/projectB",
+      "demo_link": "https://demo.projectB.com",
+      "background_color": "#2ecc71"
+    },
+    {
+      "id": 3,
+      "name": "Project C",
+      "description": "E-commerce platform",
+      "info_page": [
+        {
+          "type": "text",
+          "content": "Project C is a comprehensive e-commerce platform. It offers a seamless shopping experience with features such as product browsing, secure checkout, and order tracking. The platform is built using a microservices architecture, ensuring scalability and reliability."
+        },
+        {
+          "type": "image",
+          "content": "https://example.com/projectC/image1.png"
+        },
+        {
+          "type": "text",
+          "content": "Additional information about Project C goes here. You can provide details about payment processing, customer reviews, and any other relevant information."
+        },
+        {
+          "type": "image",
+          "content": "https://example.com/projectC/image2.png"
+        }
+      ],
+      "github_link": "https://github.com/username/projectC",
+      "demo_link": "https://demo.projectC.com",
+      "background_color": "#e74c3c"
+    }
+  ]
+}
