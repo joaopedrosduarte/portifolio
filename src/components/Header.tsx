@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Command, Moon } from "phosphor-react";
+import { Command, Moon } from "@phosphor-icons/react"
 import NavIcon from "./NavIcon";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isHeaderMinimized, setIsHeaderMinimized] = useState(false);
   function handleScroll() {

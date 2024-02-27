@@ -1,15 +1,13 @@
-import { useAnimation } from "framer-motion";
 import { useState } from "react"
 
 interface TechIconsProps {
 	tech: {
-		name: String
+		name: string
 	}
 }
 
 export default function TechIcons({tech}:TechIconsProps) {
 	const [hover, setHover] = useState(false);
-	const controls = useAnimation();
 	const iconUrl = "https://skillicons.dev/icons?i="+tech.name+"&theme=dark";
 	
 	return (
