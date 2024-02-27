@@ -1,5 +1,5 @@
-import { DownloadSimple, GithubLogo, LinkedinLogo } from "phosphor-react";
-import { useEffect, useRef, useState } from "react";
+import { DownloadSimple, LinkedinLogo } from "@phosphor-icons/react"
+import { useEffect, useState } from "react";
 
 export default function Hero() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

@@ -1,9 +1,8 @@
 import ContactButton from "./ContactButton";
 import {
   EnvelopeSimple,
-  LinkedinLogo,
   MapPin,
-} from "phosphor-react";
+} from "@phosphor-icons/react"
 
 export default function Contact() {
   return (
