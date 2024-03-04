@@ -1,9 +1,33 @@
 {
+  "short_projects": [
+    {
+      "id": 1,
+      "name": "Project A",
+      "description": "A web application for task management",
+      "image_url": "https://example.com/project_a_image.jpg",
+      "background_color": "#3498db"
+    },
+    {
+      "id": 2,
+      "name": "Project B",
+      "description": "Mobile app for language learning",
+      "image_url": "https://example.com/project_b_image.jpg",
+      "background_color": "#2ecc71"
+    },
+    {
+      "id": 3,
+      "name": "Project C",
+      "description": "E-commerce platform",
+      "image_url": "https://example.com/project_c_image.jpg",
+      "background_color": "#e74c3c"
+    }
+  ],
   "projects": [
     {
       "id": 1,
       "name": "Project A",
       "description": "A web application for task management",
+      "image_url": "https://example.com/project_a_image.jpg",
       "info_page": [
         {
           "type": "text",
@@ -15,13 +39,13 @@
         }
       ],
       "github_link": "https://github.com/username/projectA",
-      "demo_link": "https://demo.projectA.com",
-      "background_color": "#3498db"
+      "demo_link": "https://demo.projectA.com"
     },
     {
       "id": 2,
       "name": "Project B",
       "description": "Mobile app for language learning",
+      "image_url": "https://example.com/project_b_image.jpg",
       "info_page": [
         {
           "type": "text",
@@ -33,13 +57,13 @@
         }
       ],
       "github_link": "https://github.com/username/projectB",
-      "demo_link": "https://demo.projectB.com",
-      "background_color": "#2ecc71"
+      "demo_link": "https://demo.projectB.com"
     },
     {
       "id": 3,
       "name": "Project C",
       "description": "E-commerce platform",
+      "image_url": "https://example.com/project_c_image.jpg",
       "info_page": [
         {
           "type": "text",
@@ -59,8 +83,7 @@
         }
       ],
       "github_link": "https://github.com/username/projectC",
-      "demo_link": "https://demo.projectC.com",
-      "background_color": "#e74c3c"
+      "demo_link": "https://demo.projectC.com"
     }
   ]
 }
