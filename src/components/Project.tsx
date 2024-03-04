@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 interface ProjectProps {
   projectTitle: string;
   projectDescription: string;

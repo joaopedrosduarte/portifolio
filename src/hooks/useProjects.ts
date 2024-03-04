@@ -1,17 +1,12 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import type { ProjectProps } from "../types/project";
+import type { ProjectType } from "../types/project";
+import GetMethods from "../services/GetMethods";
+import { useQuery } from "react-query";
 
 export default function useProjects() {
-  const [data, setData] = useState<ProjectProps[]>([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`http://localhost:3000/projects`);
-      setData(response.data);
-    }
-    
-    fetchData();
-  },[])
-
-  return data as ProjectProps[];
+  return useQuery({
+    queryFn: async () => {
+      const { data } = await GetMethods.GetProjects();
+      return data as ProjectType[];
+    },
+  })
 }

@@ -1,13 +1,13 @@
-interface InfoPageProps {
+interface InfoPageType {
   type: string;
   content: string;
 }
 
-export interface ProjectProps {
+export interface ProjectType {
   id: number;
   name: string;
   description: string;
-  info_page: InfoPageProps[];
+  info_page: InfoPageType[];
   github_link: string;
   demo_link: string;
   image: string;
