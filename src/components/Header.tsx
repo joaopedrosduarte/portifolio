@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Command, Moon } from "@phosphor-icons/react"
+import { Moon  } from "@phosphor-icons/react"
 import NavIcon from "./NavIcon";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isHeaderMinimized, setIsHeaderMinimized] = useState(false);
@@ -20,12 +19,14 @@ export default function Header() {
   return (
     <header className={`${ isHeaderMinimized ? "py-3" : "py-10 border-b-transparent" } border-b border-lightbase transition-all duration-500 bg-darkmode-bg w-full fixed z-50 flex justify-center align-middle backdrop-filter backdrop-blur-md bg-opacity-10`}>
       <nav className="flex justify-between max-w-5xl w-full px-10 items-center">
-        <h1>
+        <div>
           <a href="/">Jpds.dev</a>
-        </h1>
+        </div>
+        <title>
+          
+        </title>
         <div className="flex gap-3">
-          <NavIcon icon={<Command size={24} />} doFunc={() => setIsMenuOpen(!isMenuOpen)} />
-          <NavIcon icon={<Moon size={24} />} doFunc={() => setIsMenuOpen(!setIsDarkMode)} />
+          <NavIcon icon={<Moon size={24} />} />
         </div>
       </nav>
     </header>

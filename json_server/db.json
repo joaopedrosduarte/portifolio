@@ -1,22 +1,22 @@
 {
   "short_projects": [
     {
-      "id": 1,
+      "id": "A",
       "name": "Project A",
       "description": "A web application for task management",
       "image_url": "https://example.com/project_a_image.jpg",
       "background_color": "#3498db"
     },
     {
-      "id": 2,
+      "id": "B",
       "name": "Project B",
       "description": "Mobile app for language learning",
       "image_url": "https://example.com/project_b_image.jpg",
       "background_color": "#2ecc71"
     },
     {
-      "id": 3,
-      "name": "Project C",
+      "id": "C",
+      "name": "C",
       "description": "E-commerce platform",
       "image_url": "https://example.com/project_c_image.jpg",
       "background_color": "#e74c3c"
@@ -24,7 +24,7 @@
   ],
   "projects": [
     {
-      "id": 1,
+      "id": "A",
       "name": "Project A",
       "description": "A web application for task management",
       "image_url": "https://example.com/project_a_image.jpg",
@@ -42,7 +42,7 @@
       "demo_link": "https://demo.projectA.com"
     },
     {
-      "id": 2,
+      "id": "B",
       "name": "Project B",
       "description": "Mobile app for language learning",
       "image_url": "https://example.com/project_b_image.jpg",
@@ -60,7 +60,7 @@
       "demo_link": "https://demo.projectB.com"
     },
     {
-      "id": 3,
+      "id": "C",
       "name": "Project C",
       "description": "E-commerce platform",
       "image_url": "https://example.com/project_c_image.jpg",

@@ -24,12 +24,14 @@ export default function Projects() {
             <div className="flex flex-col gap-24 items-center">
               {/* FAZER UM MAP RELACIONADO COM O BANCO */}
               <Project
+                projectId="A"
                 projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque debitis error illo quia quisquam accusamus. Iusto impedit quis libero, veritatis non exercitationem soluta eaque eius! Magnam neque odio earum?"
                 projectImage="#"
                 projectTitle="Projeto 1"
                 projectBackground="bg-[#1d4ed8]"
               />
               <Project
+                projectId="B"
                 projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eaque debitis error illo quia quisquam accusamus. Iusto impedit quis libero, veritatis non exercitationem soluta eaque eius! Magnam neque odio earum?"
                 projectImage="#"
                 projectTitle="Projeto 2"

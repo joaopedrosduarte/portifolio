@@ -1,9 +1,9 @@
 interface NavButtonProps {
   icon: React.ReactElement;
-  doFunc: () => void; // This is a basicaly a function to do a specific action provided by the father component
+  doFunc?: () => void; // This is a basicaly a function to do a specific action provided by the father component
 }
 
-export default function NavButton({ icon, doFunc }: NavButtonProps) {
+export default function NavButton({ icon, doFunc = () => {} }: NavButtonProps) {
   return (
     <button
       onClick={() => doFunc()}

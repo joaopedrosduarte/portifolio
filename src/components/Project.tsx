@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 interface ProjectProps {
+  projectId: string;
   projectTitle: string;
   projectDescription: string;
   projectImage: string;
@@ -6,15 +9,21 @@ interface ProjectProps {
 }
 
 export default function Project({
+  projectId,
   projectTitle,
   projectDescription,
   projectImage,
   projectBackground
 }: ProjectProps) {
+  const nav = useNavigate();
+
+  function handleProjectClick(url: string) {
+    nav(`project/${url}`);
+  }
 
   return (
     <button
-      onClick={() => console.log(projectBackground)}
+      onClick={() => handleProjectClick(projectId)}
       className="group flex flex-col bg-darkbase rounded-2xl w-full h-max justify-center items-center transition-all rg:max-w-none max-w-lg rg:flex-row"
     >
       <div className="absolute rg:max-w-[1034px] rg:h-[370px] h-[630px] max-w-[592px] w-full rg:w-full px-10 -z-10">

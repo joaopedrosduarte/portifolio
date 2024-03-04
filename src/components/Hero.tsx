@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex flex-col max-w-5xl w-full items-center px-10 pt-56 pb-48">
+      <div className="flex flex-col max-w-5xl w-full items-center px-10 pb-48">
         <div className="w-full gap-16 flex flex-col justify-between items-center">
           <span className="flex flex-col gap-3">
             <span className="text-4xl text-darkmode-auxiliartext leading-[4rem] font-semibold">

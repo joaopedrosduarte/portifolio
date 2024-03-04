@@ -1,6 +1,11 @@
-export default function Footer() {
+
+interface FooterProps {
+    className?: string;
+}
+
+export default function Footer({ className = "" }: FooterProps) {
     return(
-        <div className="flex justify-center">
+        <div className={`${className} flex justify-center`}>
             <div className="w-full flex p-10 max-w-5xl px-10 py-16 justify-center">
                 <h1 className="font-semibold text-darkmode-maintext">
                     Copyright © 2023. All rights are reserved

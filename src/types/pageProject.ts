@@ -3,9 +3,9 @@ interface InfoPageType {
   content: string;
 }
 
-export interface ProjectType {
-  id: number;
-  name: string;
+export interface PageProjectType {
+  id: string;
+  title: string;
   description: string;
   info_page: InfoPageType[];
   github_link: string;
