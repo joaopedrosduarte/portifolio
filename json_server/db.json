@@ -1,31 +1,37 @@
 {
-  "short_projects": [
+  "projects_preview": [
     {
       "id": "A",
-      "name": "Project A",
+      "title": "Project A",
       "description": "A web application for task management",
       "image_url": "https://example.com/project_a_image.jpg",
+      "github_url": "https://github.com/username/projectA",
+      "demo_url": "https://demo.projectA.com",
       "background_color": "#3498db"
     },
     {
       "id": "B",
-      "name": "Project B",
+      "title": "Project B",
       "description": "Mobile app for language learning",
       "image_url": "https://example.com/project_b_image.jpg",
+      "github_url": "https://github.com/username/projectB",
+      "demo_url": "https://demo.projectB.com",
       "background_color": "#2ecc71"
     },
     {
       "id": "C",
-      "name": "C",
+      "title": "Project C",
       "description": "E-commerce platform",
       "image_url": "https://example.com/project_c_image.jpg",
+      "github_url": "https://github.com/username/projectC",
+      "demo_url": "https://demo.projectC.com",
       "background_color": "#e74c3c"
     }
   ],
   "projects": [
     {
       "id": "A",
-      "name": "Project A",
+      "title": "Project A",
       "description": "A web application for task management",
       "image_url": "https://example.com/project_a_image.jpg",
       "info_page": [
@@ -38,12 +44,12 @@
           "content": "https://example.com/projectA/image2.png"
         }
       ],
-      "github_link": "https://github.com/username/projectA",
-      "demo_link": "https://demo.projectA.com"
+      "github_url": "https://github.com/username/projectA",
+      "demo_url": "https://demo.projectA.com"
     },
     {
       "id": "B",
-      "name": "Project B",
+      "title": "Project B",
       "description": "Mobile app for language learning",
       "image_url": "https://example.com/project_b_image.jpg",
       "info_page": [
@@ -56,12 +62,12 @@
           "content": "https://example.com/projectB/image1.png"
         }
       ],
-      "github_link": "https://github.com/username/projectB",
-      "demo_link": "https://demo.projectB.com"
+      "github_url": "https://github.com/username/projectB",
+      "demo_url": "https://demo.projectB.com"
     },
     {
       "id": "C",
-      "name": "Project C",
+      "title": "Project C",
       "description": "E-commerce platform",
       "image_url": "https://example.com/project_c_image.jpg",
       "info_page": [
@@ -82,8 +88,8 @@
           "content": "https://example.com/projectC/image2.png"
         }
       ],
-      "github_link": "https://github.com/username/projectC",
-      "demo_link": "https://demo.projectC.com"
+      "github_url": "https://github.com/username/projectC",
+      "demo_url": "https://demo.projectC.com"
     }
   ]
 }

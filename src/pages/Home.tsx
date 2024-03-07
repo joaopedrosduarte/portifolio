@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="m-auto max-[calc(100%-2rem)] text-white text-xl">
       <Header />
-      <main className="w-full  pt-56">
+      <main className="w-full pt-56">
         <Hero />
         <About />
         <Projects />
