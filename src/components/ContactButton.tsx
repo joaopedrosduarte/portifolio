@@ -1,10 +1,4 @@
 
-type propsType = {
-    size: number
-    color: string
-    weight: string
-}
-
 interface ContactButton {
     component: React.ReactElement
     title: string
@@ -12,7 +6,7 @@ interface ContactButton {
     link?: string
 }
 
-export default function ContactButton({ component, title, content, link="" }:ContactButton) {
+export default function ContactButton({ component, title, content }:ContactButton) {
     return(
         <div className="flex mb4:flex-row flex-col items-center mb4:text-left text-center gap-2">
             <div className="w-14 h-14 bg-darkbase transition-shadow duration-300 shadow-baseblured shadow-black/30 hover:shadow-shinny hover:shadow-blue-700 rounded-full items-center flex justify-center">
