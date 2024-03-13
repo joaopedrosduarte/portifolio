@@ -2,32 +2,36 @@
   "projects_preview": [
     {
       "id": "A",
+      "type": "project",
       "title": "Project A",
       "description": "A web application for task management",
       "image_url": "https://example.com/project_a_image.jpg",
       "github_url": "https://github.com/username/projectA",
       "demo_url": "https://demo.projectA.com",
-      "background_color": "#3498db"
+      "color": "#3498db"
     },
     {
       "id": "B",
+      "type": "project",
       "title": "Project B",
       "description": "Mobile app for language learning",
       "image_url": "https://example.com/project_b_image.jpg",
       "github_url": "https://github.com/username/projectB",
       "demo_url": "https://demo.projectB.com",
-      "background_color": "#2ecc71"
+      "color": "#2ecc71"
     },
     {
       "id": "C",
+      "type": "project",
       "title": "Project C",
       "description": "E-commerce platform",
       "image_url": "https://example.com/project_c_image.jpg",
       "github_url": "https://github.com/username/projectC",
       "demo_url": "https://demo.projectC.com",
-      "background_color": "#e74c3c"
+      "color": "#e74c3c"
     }
-  ],
+],
+
   "projects": [
     {
       "id": "A",

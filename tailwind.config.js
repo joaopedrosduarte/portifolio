@@ -1,18 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
+	content: [
+		"./index.html",
+		"./src/**/*.{js,ts,jsx,tsx}",
+	],
+	theme: {
+		extend: {
 			colors: {
 				"lightbase": "#303036",
 				"darkbase": "#27272c",
 				"darkmode-bg": "#16181D",
 				"lightgray": "#C4C9D4",
 				"darkmode-maintext": "#E8E8FD",
-				"darkmode-auxiliartext": "#C4C9D4"
+				"darkmode-auxiliartext": "#C4C9D4",
+				"project1": "#3498db",
+				"project2": "#2ecc71",
+				"project3": "#e74c3c",
 			},
 			screens: {
 				'mb1': "416px",
@@ -24,13 +27,13 @@ export default {
 				'rg': '896px',
 			},
 			boxShadow: {
-				'baseblured': "0 0 10px -1px",
+				'baseblured': "0px 0px 10px -1px",
 				'shinny': "0px 2px 40px -2px",
 				'base': "0 0 2px 1px rgba(0,0,0,0.3)",
 			},
 			animation: {
 				"loop-scroll": "loop-scroll 50s linear infinite",
-			}, 
+			},
 			keyframes: {
 				"loop-scroll": {
 					from: { transform: "translateX(0)" },
@@ -38,6 +41,6 @@ export default {
 				}
 			}
 		},
-  },
-  plugins: [],
+	},
+	plugins: [],
 }

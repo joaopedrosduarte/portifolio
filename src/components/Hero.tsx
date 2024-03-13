@@ -1,13 +1,8 @@
-import { DownloadSimple, LinkedinLogo } from "@phosphor-icons/react"
-import { useEffect, useState } from "react";
+import { DownloadSimple, LinkedinLogo } from "@phosphor-icons/react";
+import Button from "./Button";
 
 export default function Hero() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWindowWidth(window.innerWidth);
-    });
-  });
+  const windowWidth = window.innerWidth;
 
   return (
     <div className="flex w-full justify-center items-center">
@@ -24,16 +19,19 @@ export default function Hero() {
             </span>
           </span>
           <div className="w-full flex mb3:flex-row flex-col gap-5 justify-between align-middle">
-            <button className="px-4 py-3 transition-all justify-center items-center bg-blue-600 duration-200 hover:shadow-blue-700 hover:shadow-shinny rounded-lg flex gap-2">
-              <p className="font-medium mb4:text-base text-sm text-darkmode-maintext">
-                Resume.pdf
-              </p>
-              <DownloadSimple
-                size={windowWidth <= 608 ? 18 : 20}
-                weight="bold"
-                color="#E8E8FD"
-              />
-            </button>
+            <Button
+              component={
+                <DownloadSimple
+                  size={windowWidth <= 608 ? 18 : 20}
+                  weight="bold"
+                  color="#E8E8FD"
+                />
+              }
+              //For some reason, the color of the shadow is changing with shadow-color 
+              //property, is changing with the color of textzx
+              className="bg-blue-600 text-blue-700 hover:shadow-blue-700 duration-200 hover:shadow-shinny"
+              content="Resume.pdf"
+            />
             <div className="flex gap-4 mb6:gap-8 justify-evenly">
               <div className="flex gap-1 transition-all items-center cursor-pointer duration-300 text-blue-500 hover:text-zinc-200">
                 <LinkedinLogo size={windowWidth <= 608 ? 22 : 26} />

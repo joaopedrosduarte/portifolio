@@ -1,7 +1,8 @@
-export interface ShortProjectType {
+export interface previewProjectType {
   id: string;
   title: string;
+  type: string;
   description: string;
   image: string;
-  background_color: string;
+  color: string;
 }
