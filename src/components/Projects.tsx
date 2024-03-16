@@ -32,9 +32,9 @@ export default function Projects() {
                 id={project.id}
                 title={project.title}
                 description={project.description}
-                image={project.image}
-                ghLink={project.ghlink}
-                liveLink={project.liveLink}
+                image={"./portifolio.png"}
+                ghLink={"#"}
+                liveLink={"#"}
                 tools={project.tools}
                 projectHovered={projectHovered}
                 onSetProjectHovered={setProjectHovered}
