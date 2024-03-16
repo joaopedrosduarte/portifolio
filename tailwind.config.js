@@ -28,10 +28,14 @@ export default {
 				'shinny': "0px 2px 40px -2px",
 				'base': "0px 0px 2px 1px rgba(0,0,0,0.3)",
 			},
+			animation: {
+				"loop-scroll": "loop-scroll 70s linear infinite",
+			},
 			keyframes: {
 				"loop-scroll": {
-					from: { transform: "translateX(0)" },
-					to: { transform: "translateX(-108%)" },
+					"0%": { transform: "translateY(0%)" },
+					"50%": { transform: "translateY(50%)" },
+					"100%": { transform: "translateY(100%)" },
 				}
 			}
 		},

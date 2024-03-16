@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": "A",
-      "title": "Project A",
+      "title": "Build a Spotify Connected App",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum at corrupti aperiam, perferendis rerum repudiandae temporibus sed veniam nam sapiente! Necessitatibus neque libero tenetur enim minima itaque maiores sint excepturi!",
       "image_url": "https://example.com/project_a_image.jpg",
       "github_url": "https://github.com/username/projectA",
@@ -16,7 +16,7 @@
     },
     {
       "id": "B",
-      "title": "Project B",
+      "title": "Spotify Profile",
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo deleniti, esse sint voluptatibus vero laborum et, mollitia sequi soluta eum doloribus earum praesentium velit cum, qui blanditiis dolorum placeat inventore!",
       "image_url": "https://example.com/project_b_image.jpg",
       "github_url": "https://github.com/username/projectB",
@@ -29,7 +29,7 @@
     },
     {
       "id": "C",
-      "title": "Project C",
+      "title": "Pepo Portifolio (v1)",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatem ducimus id asperiores quasi quia quod veniam error, voluptatibus dicta beatae voluptate necessitatibus voluptas cupiditate laboriosam sequi fugit earum minima?",
       "image_url": "https://example.com/project_c_image.jpg",
       "github_url": "https://github.com/username/projectC",
