@@ -1,87 +1,104 @@
+import { GithubLogo, ArrowUpRight } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { previewProjectType } from "../types/previewProject";
-import Button from "./Button";
-import { GithubLogo, SignIn } from "@phosphor-icons/react";
+import Tool from "./Tools";
 
-interface ProjectProps extends previewProjectType {
-  index: number;
+interface ProjectProps {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  tools: string[];
+  ghLink: string;
+  liveLink: string;
+  projectHovered: string;
+  onSetProjectHovered: (value: string) => void;
 }
 
 export default function Project({
+  id,
   title,
   description,
-  color,
-  index,
+  image,
+  ghLink,
+  liveLink,
+  tools,
+  projectHovered,
+  onSetProjectHovered,
 }: ProjectProps) {
-  const [bg, setBg] = useState(color);
-  const [buttonClassName, setButtonClassName] = useState("");
+  const [linkHovered, setLinkHovered] = useState("");
+  const [isBlured, setIsBlured] = useState(false);
 
   useEffect(() => {
-    setBg(color);
-    switch (index) {
-      case 0:
-        setButtonClassName("hover:text-blue-400 hover:shadow-blue-400");
-        break;
-      case 1:
-        setButtonClassName("hover:text-green-400 hover:shadow-green-400");
-        break;
-      case 2:
-        setButtonClassName("hover:text-red-500 hover:shadow-red-500");
-        break;
+    if (projectHovered != id && projectHovered != "") {
+      setIsBlured(true);
+    } else {
+      setIsBlured(false);
     }
-  }, [color, index]);
+  }, [id, projectHovered]);
+
+  function handleMouseEnter() {
+    onSetProjectHovered(id);
+    setLinkHovered("live");
+  }
+
+  function handleMouseLeave() {
+    onSetProjectHovered("");
+    setLinkHovered("");
+  }
 
   return (
-    <div className="group z-10 flex flex-col bg-darkbase rounded-2xl w-full h-max justify-center items-center transition-all rg:max-w-none max-w-lg rg:flex-row">
-      <div className="flex rg:flex-row flex-col items-center w-full">
-        <div
-          className={`${
-            "bg-[" + bg + "]"
-          } w-full h-[360px] max-w-[530px] rounded-2xl transition-colors duration-300`}
-        >
-          <img
-            className="flex rg:w-[532px] w-full h-full rounded-lg"
-            src="#"
-            alt="imagem do projeto"
-          />
-        </div>
-        <div className="flex flex-col w-full rg:h-max h-[250px] p-4 mb-2 gap-4 max-h-80">
-          <div className="flex flex-col h-full justify-center items-center gap-8">
-            <h1 className="text-base font-semibold text-center">
-              {title}
-            </h1>
-            <span className="text-center text-zinc-300 text-base">
-              {description}
-            </span>
-            <div>
-              <div className="flex gap-4">
-                <Button
-                  content="Live"
-                  className={`${buttonClassName} 
-                  text-darkmode-maintext 
-                    border
-                  border-lightbase
-                    hover:z-10
-                    hover:shadow-baseblured`}
-                  spanClassName="pl-0.5"
-                  component={<SignIn />}
-                />
-                <Button
-                  content="Github"
-                  className={`${buttonClassName} 
-                  text-darkmode-maintext 
-                    border
-                  border-lightbase
-                    hover:z-10
-                    hover:shadow-baseblured`}
-                  component={<GithubLogo />}
-                  spanClassName=""
-                />
-              </div>
-            </div>
+    <a
+      href="#"
+      className={`${
+        isBlured ? "opacity-50" : ""
+      } flex group w-full scale-105 transition-all border-transparent
+      duration-200 gap-6 border-t p-8 rounded-lg 
+      hover:bg-lightbase/20 hover:border-t-lightbase/40 
+      hover:shadow-projectshadow hover:shadow-black/10`}
+      onMouseLeave={() => handleMouseLeave()}
+      onMouseEnter={() => handleMouseEnter()}
+    >
+      <div className="flex flex-col">
+        <div className="w-48 h-36 bg-blue-700 rounded-lg" />
+      </div>
+      <div className="flex w-full flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <div
+            className={`${
+              linkHovered == "live" ? "text-blue-400" : "text-darkmode-maintext"
+            } flex items-end gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
+          >
+            <h1>{title}</h1>
+            <ArrowUpRight
+              weight="bold"
+              className={`${
+                linkHovered == "live" ? "translate-x-1 -translate-y-1" : ""
+              } pb-px transition-transform`}
+              size={18}
+            />
+          </div>
+          <div
+            className="relative flex items-center hover:text-blue-500 transition-colors text-darkmode-auxiliartext"
+            onMouseEnter={() => setLinkHovered("github")}
+            onMouseLeave={() => setLinkHovered("live")}
+          >
+            <a href="#" className="flex items-center justify-center">
+              <GithubLogo weight="regular" size={20} className="pb-0.5" />
+              <h1 className="font-normal text-base ">Github</h1>
+            </a>
           </div>
         </div>
+        <span className="font-normal text-sm leading-[21px] text-darkmode-auxiliartext">
+          {description}
+        </span>
+        <div className="mt-2 flex gap-1.5">
+          {
+            tools.map((tool) => (
+              <Tool key={tool} name={tool} />
+            ))  
+          }
+        </div>
       </div>
-    </div>
+    </a>
   );
 }

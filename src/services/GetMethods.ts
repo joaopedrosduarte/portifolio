@@ -1,8 +1,8 @@
 import axios from "axios";
 
 class Get {
-  GetProjectsPreview() {
-    return axios.get("http://localhost:3000/projects_preview");
+  GetProjects() {
+    return axios.get("http://localhost:3000/projects");
   }
 }
 

@@ -13,9 +13,6 @@ export default {
 				"lightgray": "#C4C9D4",
 				"darkmode-maintext": "#E8E8FD",
 				"darkmode-auxiliartext": "#C4C9D4",
-				"project1": "#3498db",
-				"project2": "#2ecc71",
-				"project3": "#e74c3c",
 			},
 			screens: {
 				'mb1': "416px",
@@ -29,10 +26,7 @@ export default {
 			boxShadow: {
 				'baseblured': "0px 0px 10px -1px",
 				'shinny': "0px 2px 40px -2px",
-				'base': "0 0 2px 1px rgba(0,0,0,0.3)",
-			},
-			animation: {
-				"loop-scroll": "loop-scroll 50s linear infinite",
+				'base': "0px 0px 2px 1px rgba(0,0,0,0.3)",
 			},
 			keyframes: {
 				"loop-scroll": {

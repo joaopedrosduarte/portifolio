@@ -1,11 +1,13 @@
-import useProjectsPreview from "../hooks/usePreviewProject";
+import useProjects from "../hooks/useProject";
+import LoadingComponent from "./LoadingComponent";
 import EmptyComponent from "./EmptyComponent";
 import ErrorComponent from "./ErrorComponent";
-import LoadingComponent from "./LoadingComponent";
+import { useState } from "react";
 import Project from "./Project";
 
 export default function Projects() {
-  const { data, isLoading, isError, isSuccess } = useProjectsPreview();
+  const { data, isLoading, isError, isSuccess } = useProjects();
+  const [projectHovered, setProjectHovered] = useState("");
 
   if (isLoading) return <LoadingComponent />;
 
@@ -23,21 +25,21 @@ export default function Projects() {
               Cada projeto que fez parte da minha caminhada, até agora. 😉
             </span>
           </div>
-          <div className="flex flex-col gap-28 items-center">
-            {data.map((project, index) => {
-              return (
-                <Project
-                  key={project.id}
-                  index={index}
-                  color={project.color}
-                  type={project.type}
-                  description={project.description}
-                  id={project.id}
-                  image={project.image} 
-                  title={project.title}
-                />
-              );
-            })}
+          <div className="flex flex-col gap-12 items-center">
+            {data.map((project) => (
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                ghLink={project.ghlink}
+                liveLink={project.liveLink}
+                tools={project.tools}
+                projectHovered={projectHovered}
+                onSetProjectHovered={setProjectHovered}
+              />
+            ))}
           </div>
         </div>
       </div>

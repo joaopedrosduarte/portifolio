@@ -1,99 +1,46 @@
 {
-  "projects_preview": [
-    {
-      "id": "A",
-      "type": "project",
-      "title": "Project A",
-      "description": "A web application for task management",
-      "image_url": "https://example.com/project_a_image.jpg",
-      "github_url": "https://github.com/username/projectA",
-      "demo_url": "https://demo.projectA.com",
-      "color": "#3498db"
-    },
-    {
-      "id": "B",
-      "type": "project",
-      "title": "Project B",
-      "description": "Mobile app for language learning",
-      "image_url": "https://example.com/project_b_image.jpg",
-      "github_url": "https://github.com/username/projectB",
-      "demo_url": "https://demo.projectB.com",
-      "color": "#2ecc71"
-    },
-    {
-      "id": "C",
-      "type": "project",
-      "title": "Project C",
-      "description": "E-commerce platform",
-      "image_url": "https://example.com/project_c_image.jpg",
-      "github_url": "https://github.com/username/projectC",
-      "demo_url": "https://demo.projectC.com",
-      "color": "#e74c3c"
-    }
-],
-
   "projects": [
     {
       "id": "A",
       "title": "Project A",
-      "description": "A web application for task management",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum at corrupti aperiam, perferendis rerum repudiandae temporibus sed veniam nam sapiente! Necessitatibus neque libero tenetur enim minima itaque maiores sint excepturi!",
       "image_url": "https://example.com/project_a_image.jpg",
-      "info_page": [
-        {
-          "type": "text",
-          "content": "Project A is a modern web application designed for efficient task management. Key features include user-friendly interface, task creation and assignment, real-time collaboration, and progress tracking. This project is built using the latest technologies such as React for the frontend and Node.js for the backend. It aims to streamline team collaboration and enhance productivity."
-        },
-        {
-          "type": "image",
-          "content": "https://example.com/projectA/image2.png"
-        }
-      ],
       "github_url": "https://github.com/username/projectA",
-      "demo_url": "https://demo.projectA.com"
+      "demo_url": "https://demo.projectA.com",
+      "tools": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB"
+      ]
     },
     {
       "id": "B",
       "title": "Project B",
-      "description": "Mobile app for language learning",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo deleniti, esse sint voluptatibus vero laborum et, mollitia sequi soluta eum doloribus earum praesentium velit cum, qui blanditiis dolorum placeat inventore!",
       "image_url": "https://example.com/project_b_image.jpg",
-      "info_page": [
-        {
-          "type": "text",
-          "content": "Project B is a mobile application designed to make language learning enjoyable and interactive. Main features include gamified learning modules, speech recognition for pronunciation practice, and progress analytics. The app is built using the Flutter framework to ensure a smooth cross-platform experience."
-        },
-        {
-          "type": "image",
-          "content": "https://example.com/projectB/image1.png"
-        }
-      ],
       "github_url": "https://github.com/username/projectB",
-      "demo_url": "https://demo.projectB.com"
+      "demo_url": "https://demo.projectB.com",
+      "tools": [
+        "Java",
+        "Android SDK",
+        "SQLite"
+      ]
     },
     {
       "id": "C",
       "title": "Project C",
-      "description": "E-commerce platform",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatem ducimus id asperiores quasi quia quod veniam error, voluptatibus dicta beatae voluptate necessitatibus voluptas cupiditate laboriosam sequi fugit earum minima?",
       "image_url": "https://example.com/project_c_image.jpg",
-      "info_page": [
-        {
-          "type": "text",
-          "content": "Project C is a comprehensive e-commerce platform. It offers a seamless shopping experience with features such as product browsing, secure checkout, and order tracking. The platform is built using a microservices architecture, ensuring scalability and reliability."
-        },
-        {
-          "type": "image",
-          "content": "https://example.com/projectC/image1.png"
-        },
-        {
-          "type": "text",
-          "content": "Additional information about Project C goes here. You can provide details about payment processing, customer reviews, and any other relevant information."
-        },
-        {
-          "type": "image",
-          "content": "https://example.com/projectC/image2.png"
-        }
-      ],
       "github_url": "https://github.com/username/projectC",
-      "demo_url": "https://demo.projectC.com"
+      "demo_url": "https://demo.projectC.com",
+      "tools": [
+        "Python",
+        "Django",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
     }
   ]
 }

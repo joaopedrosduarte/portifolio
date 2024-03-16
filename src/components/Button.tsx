@@ -12,7 +12,7 @@ interface ButtonProps {
 export default function Button({ component, content, className = "", spanClassName="text-darkmode-maintext" }: ButtonProps) {
   console.log(className)
   return (
-    <button className={cn(className ,"duration-200 px-4 py-3 transition-all justify-center items-center rounded-lg flex gap-2")}>
+    <button className={cn(className ," duration-200 px-4 py-3 transition-all justify-center items-center rounded-lg flex gap-2")}>
       <p className={cn(spanClassName, "font-medium mb4:text-base text-sm")}>
         {content}
       </p>

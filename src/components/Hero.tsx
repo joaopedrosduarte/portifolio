@@ -28,7 +28,7 @@ export default function Hero() {
                 />
               }
               //For some reason, the color of the shadow is changing with shadow-color 
-              //property, is changing with the color of textzx
+              //property, is changing with the color of text
               className="bg-blue-600 text-blue-700 hover:shadow-blue-700 duration-200 hover:shadow-shinny"
               content="Resume.pdf"
             />
