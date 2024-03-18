@@ -127,7 +127,7 @@ export default function Project({
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
           <div
             className={`${
-              linkHovered == "live" ? "text-blue-400" : "text-darkmode-maintext"
+              linkHovered == "live" ? "text-blue-500" : "text-darkmode-maintext"
             } flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
           >
             <h1>{title}</h1>

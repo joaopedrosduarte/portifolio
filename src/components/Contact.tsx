@@ -6,9 +6,9 @@ import {
 
 export default function Contact() {
   return (
-    <div className="flex w-full justify-center items-center bg-darkbase">
-      <div className="flex w-full flex-col max-w-5xl px-10 py-16">
-        <div className="flex flex-col gap-2 mb4:text-left text-center pb-10">
+    <div className="flex w-full justify-center items-center">
+      <div className="flex w-full flex-col max-w-5xl px-10 pt-4 pb-44">
+        <div className="flex flex-col gap-2 pb-10 mb4:text-left text-center">
           <h1 className="text-blue-500 font-bold text-[26px]">
             Contact
           </h1>

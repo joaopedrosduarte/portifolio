@@ -18,10 +18,10 @@ export default function Projects() {
   if (isSuccess) {
     return (
       <div className="flex w-full justify-center items-center">
-        <div className="flex w-full max-w-5xl flex-col px-10 pt-28 pb-32 gap-14 align-middle">
+        <div className="flex w-full max-w-5xl flex-col px-10 py-28 gap-8 align-middle">
           <div className="flex flex-col gap-2 mb4:text-left text-center">
             <h1 className="text-blue-500 font-bold text-[26px]">Projects</h1>
-            <span className="font-semibold text-xl pb-8 text-darkmode-maintext">
+            <span className="font-semibold text-xl pb-4 text-darkmode-maintext">
               Cada projeto que fez parte da minha caminhada, até agora. 😉
             </span>
           </div>
