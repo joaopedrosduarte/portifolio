@@ -33,11 +33,11 @@ export default function Hero() {
               content="Resume.pdf"
             />
             <div className="flex gap-4 mb6:gap-8 justify-evenly">
-              <div className="flex gap-1 transition-all items-center cursor-pointer duration-300 text-blue-500 hover:text-zinc-200">
+              <a target="_blank" href="https://www.linkedin.com/in/joãopedroduarte" className="flex gap-1 transition-all items-center cursor-pointer duration-300 text-blue-500 hover:text-zinc-200">
                 <LinkedinLogo size={windowWidth <= 608 ? 22 : 26} />
-                <a className="mb4:text-lg font-medium text-base">Linkedin</a>
-              </div>
-              <div className="flex gap-1 transition-all items-center cursor-pointer duration-300 fill-blue-500 hover:fill-zinc-200 text-blue-500 hover:text-zinc-200">
+                <div className="mb4:text-lg font-medium text-base">Linkedin</div>
+              </a>
+              <a href="https://github.com/joaopedrosduarte" target="_blank" className="flex gap-1 transition-all items-center cursor-pointer duration-300 fill-blue-500 hover:fill-zinc-200 text-blue-500 hover:text-zinc-200">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={windowWidth <= 608 ? "22" : "26"}
@@ -49,7 +49,7 @@ export default function Hero() {
                 <a className="mb4:text-lg font-medium text-base">
                   @joaopedrosduarte
                 </a>
-              </div>
+              </a>
             </div>
           </div>
         </div>

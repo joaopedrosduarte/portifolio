@@ -20,6 +20,7 @@ export default function Contact() {
           <ContactButton
             content="jpdsdev@gmail.com"
             title="Email"
+            href="mailto:jpdsdev@gmail.com"
             component={<EnvelopeSimple size={32} color="#3b82f6" />}
           />
           <ContactButton
