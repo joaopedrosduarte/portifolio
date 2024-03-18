@@ -62,6 +62,7 @@ export default function Project({
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
           <a
             href={liveLink}
+            target="_blank"
             className={`group hover:text-blue-500 flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
           >
             <h1>{title}</h1>
@@ -74,7 +75,7 @@ export default function Project({
             </div>
           </a>
           <div className="hidden mb3:flex items-center hover:text-blue-500 transition-colors text-darkmode-maintext">
-            <a href={ghLink} className="flex items-center justify-center pt-1">
+            <a href={ghLink} target="_blank" className="flex items-center justify-center pt-1">
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
             </a>
@@ -102,6 +103,7 @@ export default function Project({
   ) : (
     <a
       href={liveLink}
+      target="_blank"
       className={`${
         isBlured ? "opacity-50" : ""
       } flex scale-105 group w-full transition-all border-transparent
@@ -144,7 +146,7 @@ export default function Project({
             onMouseEnter={() => setLinkHovered("github")}
             onMouseLeave={() => setLinkHovered("live")}
           >
-            <a href={ghLink} className="flex items-center justify-center pt-1">
+            <a href={ghLink} target="_blank" className="flex items-center justify-center pt-1">
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
             </a>

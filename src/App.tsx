@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
 import { QueryClient, QueryClientProvider } from "react-query";
-
+import Home from "./pages/Home";
 
 function App() {
   const queryClient = new QueryClient();
