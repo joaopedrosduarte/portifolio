@@ -1,4 +1,5 @@
 import { useState } from "react"
+import useTheme from "../hooks/useTheme";
 
 interface TechIconsProps {
 	tech: {
@@ -7,8 +8,9 @@ interface TechIconsProps {
 }
 
 export default function TechIcons({tech}:TechIconsProps) {
+	const { theme }= useTheme();
+	const iconUrl = "https://skillicons.dev/icons?i="+tech.name+"&theme="+theme;
 	const [hover, setHover] = useState(false);
-	const iconUrl = "https://skillicons.dev/icons?i="+tech.name+"&theme=dark";
 	
 	return (
 		<>

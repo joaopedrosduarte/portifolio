@@ -1,4 +1,4 @@
-import { Moon } from "@phosphor-icons/react";
+import useTheme from "../hooks/useTheme";
 import { useState } from "react";
 import NavIcon from "./NavIcon";
 
@@ -8,6 +8,7 @@ interface HeaderProps {
 
 export default function Header({titleContent = ""}: HeaderProps) {
   const [isHeaderMinimized, setIsHeaderMinimized] = useState(false);
+  const { theme } = useTheme();
   const [title, setTitle] = useState(titleContent);
   
   function handleScroll() {
@@ -30,19 +31,19 @@ export default function Header({titleContent = ""}: HeaderProps) {
   return (
     <header
       className={`${
-        isHeaderMinimized ? "py-3" : "py-10 border-b-transparent"
-      } border-b border-lightbase transition-all duration-500 bg-darkmode-bg w-full fixed z-50 
+        isHeaderMinimized ? "py-3" : "py-10 border-b-transparent bg-transparent"
+      } ${theme == "light" ? "border-lightmode-darkbase bg-lightmode-bg" : "border-darkmode-lightbase bg-darkmode-bg"} border-b transition-all duration-500 w-full fixed z-50 
       flex justify-center align-middle backdrop-filter backdrop-blur-md bg-opacity-10`}
     >
       <nav className="flex justify-between max-w-5xl w-full px-10 items-center">
         <div>
-          <a href="/">Jpds.dev</a>
+          <a href="/" className={`${theme == "light"? "text-lightmode-maintext" : "text-darkmode-maintext" }`}>Jpds.dev</a>
         </div>
         {
           title == "" ? "" : <title> + title + </title>
         }
         <div className="flex gap-3">
-          <NavIcon icon={<Moon size={24} />} />
+          <NavIcon />
         </div>
       </nav>
     </header>

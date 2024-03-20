@@ -1,34 +1,30 @@
 import { GithubLogo, ArrowUpRight } from "@phosphor-icons/react";
+import { ProjectType } from "../types/Project";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Tool from "./Tools";
 
-interface ProjectProps {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tools: string[];
-  ghLink: string;
-  liveLink: string;
+interface ProjectProps extends ProjectType {
+  theme: string;
   projectHovered: string;
   onSetProjectHovered: (value: string) => void;
 }
 
 export default function Project({
   id,
+  theme,
   title,
   description,
-  image,
   ghLink,
   liveLink,
+  image,
   tools,
   projectHovered,
   onSetProjectHovered,
 }: ProjectProps) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [linkHovered, setLinkHovered] = useState("");
   const [isBlured, setIsBlured] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -56,47 +52,77 @@ export default function Project({
 
   return windowWidth < 736 ? (
     <div
-      className={`flex mb3:scale-105 w-full transition-all border-transparent duration-200 gap-6 border-t p-8 rounded-lg flex-col`}
+      className={`group/container flex mb3:scale-105 w-full transition-all border-transparent duration-200 gap-6 border-t p-8 rounded-lg flex-col`}
     >
       <div className="flex w-full flex-col gap-2">
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
           <a
             href={liveLink}
             target="_blank"
-            className={`group hover:text-blue-500 flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
+            className={`${
+              theme == "light" ? "text-zinc-700" : "text-darkmode-maintext"
+            } group/title hover:text-blue-500 flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
           >
             <h1>{title}</h1>
             <div className="flex pt-1">
               <ArrowUpRight
                 weight="bold"
-                className={`group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform h-full`}
+                className={`group-hover/title:translate-x-1 group-hover/title:-translate-y-1 transition-transform h-full`}
                 size={18}
               />
             </div>
           </a>
           <div className="hidden mb3:flex items-center hover:text-blue-500 transition-colors text-darkmode-maintext">
-            <a href={ghLink} target="_blank" className="flex items-center justify-center pt-1">
+            <a
+              href={ghLink}
+              target="_blank"
+              className={`${
+                theme == "light"
+                  ? "text-lightmode-auxiliartext"
+                  : "text-darkmode-auxiliartext"
+              } hover:text-blue-500 duration-200 transition-colors flex items-center justify-center pt-1`}
+            >
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
             </a>
           </div>
-          <span className="font-normal text-sm leading-[21px] text-darkmode-auxiliartext">
+          <span
+            className={`${
+              theme == "light"
+                ? "text-lightmode-auxiliartext"
+                : "text-darkmode-auxiliartext"
+            } font-normal text-sm leading-[21px] text-darkmode-auxiliartext`}
+          >
             {description}
           </span>
           <div className="flex mb3:hidden items-center pt-1.5 pb-px hover:text-blue-500 transition-colors text-darkmode-maintext">
-            <a href={ghLink} className="flex items-center justify-center">
+            <a
+              href={ghLink}
+              target="_blank"
+              className={`${
+                theme == "light"
+                  ? "text-lightmode-auxiliartext"
+                  : "text-darkmode-auxiliartext"
+              } hover:text-blue-500 duration-200 transition-colors flex items-center justify-center pt-1`}
+            >
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
-              <h1 className="font-normal text-sm block">Github</h1>
+              <h1 className="font-normal text-base block">Github</h1>
             </a>
           </div>
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {tools.map((tool) => (
-            <Tool key={tool} name={tool} />
+            <Tool theme={theme} key={tool} name={tool} />
           ))}
         </div>
       </div>
-      <div className="flex border-2 h-64 mb3:h-80 flex-col border-darkbase group-hover:border-lightbase rounded-lg overflow-hidden">
+      <div
+        className={`${
+          theme == "light"
+            ? "group-hover/container:border-lightmode-darkbase border-lightmode-lightbase"
+            : "group-hover/container:border-darkmode-lightbase border-darkmode-darkbase"
+        } flex transition-colors duration-200 border-2 h-64 mb3:h-80 flex-col rounded-lg overflow-hidden`}
+      >
         <img src={image} className="w-full object-cover" />
       </div>
     </div>
@@ -108,12 +134,21 @@ export default function Project({
         isBlured ? "opacity-50" : ""
       } flex scale-105 group w-full transition-all border-transparent
       duration-200 gap-6 border-t p-8 rounded-lg flex-row
-      hover:bg-lightbase/20 hover:border-t-lightbase/40 
-      hover:shadow-projectshadow hover:shadow-black/10`}
+    ${
+      theme == "light"
+        ? "hover:bg-lightmode-lightbase/20 hover:border-t-lightmode-darkbase/40 hover:shadow-lightmode-darkbase/60 hover:shadow-md"
+        : "hover:bg-darkmode-lightbase/20 hover:border-t-darkmode-lightbase/40 hover:shadow-black/10 hover:shadow-md"
+    }`}
       onMouseLeave={() => handleMouseLeave()}
       onMouseEnter={() => handleMouseEnter()}
     >
-      <div className="h-32 transition-colors border-lightbase border-2 duration-200 overflow-hidden rounded-lg flex-col mb6:flex">
+      <div
+        className={`${
+          theme == "light"
+            ? "border-lightmode-lightbase"
+            : "border-darkmode-lightbase"
+        } h-32 transition-colors border-2 duration-200 overflow-hidden rounded-lg flex-col mb6:flex`}
+      >
         <motion.img
           whileHover={{
             translateY: "calc(-100% + 144px)",
@@ -127,7 +162,11 @@ export default function Project({
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
           <div
             className={`${
-              linkHovered == "live" ? "text-blue-500" : "text-darkmode-maintext"
+              linkHovered == "live"
+                ? "text-blue-500"
+                : theme == "light"
+                ? "text-zinc-700"
+                : "text-darkmode-maintext"
             } flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
           >
             <h1>{title}</h1>
@@ -142,22 +181,36 @@ export default function Project({
             </div>
           </div>
           <div
-            className="flex items-center hover:text-blue-500 transition-colors text-darkmode-maintext"
+            className={`${
+              theme == "light"
+                ? "text-lightmode-auxiliartext"
+                : "text-darkmode-auxiliartext"
+            } flex items-center hover:text-blue-500 transition-colors`}
             onMouseEnter={() => setLinkHovered("github")}
             onMouseLeave={() => setLinkHovered("live")}
           >
-            <a href={ghLink} target="_blank" className="flex items-center justify-center pt-1">
+            <a
+              href={ghLink}
+              target="_blank"
+              className="flex items-center justify-center pt-1"
+            >
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
             </a>
           </div>
-          <span className="font-normal text-sm leading-[21px] text-darkmode-auxiliartext">
+          <span
+            className={`${
+              theme == "light"
+                ? "text-lightmode-auxiliartext"
+                : "text-darkmode-auxiliartext"
+            } font-normal text-sm leading-[21px] text-darkmode-auxiliartext`}
+          >
             {description}
           </span>
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {tools.map((tool) => (
-            <Tool key={tool} name={tool} />
+            <Tool key={tool} theme={theme} name={tool} />
           ))}
         </div>
       </div>

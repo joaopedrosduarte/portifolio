@@ -4,8 +4,6 @@
 
 :root {
   font-family: "Inter", -apple-system, sans-serif;
-  background: #16181d;
-  color: #e8e8fd;
   background-size: 224px;
 
   -webkit-font-smoothing: antialiased;
@@ -13,8 +11,4 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  --color-project1: #3498db;
-  --color-project2: #2ecc71;
-  --color-project3: #e74c3c;
 }

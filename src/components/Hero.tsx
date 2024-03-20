@@ -1,7 +1,9 @@
 import { DownloadSimple, LinkedinLogo } from "@phosphor-icons/react";
 import HeroButton from "./HeroButton";
+import useTheme from "../hooks/useTheme";
 
 export default function Hero() {
+  const { theme } = useTheme();
   const windowWidth = window.innerWidth;
 
   return (
@@ -9,10 +11,22 @@ export default function Hero() {
       <div className="flex flex-col max-w-5xl w-full items-center px-10 pb-48">
         <div className="w-full gap-16 flex flex-col justify-between items-center">
           <span className="flex flex-col gap-3">
-            <span className="text-4xl text-darkmode-auxiliartext leading-[4rem] font-semibold">
+            <span
+              className={`${
+                theme == "light"
+                  ? "text-lightmode-auxiliartext"
+                  : "text-darkmode-auxiliartext"
+              } text-4xl leading-[4rem] font-semibold`}
+            >
               Eae tudo certo? 👋🏼{" "}
             </span>
-            <span className="text-3xl text-darkmode-maintext leading-[3rem] font-semibold">
+            <span
+              className={`text-3xl ${
+                theme == "light"
+                  ? "text-lightmode-maintext"
+                  : "text-darkmode-maintext"
+              } leading-[3rem] font-semibold`}
+            >
               Sou João Pedro Duarte, um brasileiro 🇧🇷 entusiasta da tecnologia
               desde pequeno 🚀 e na procura de ingressar no mercado como
               desenvolvedor Full-Stack. 👨‍💻
@@ -24,20 +38,34 @@ export default function Hero() {
                 <DownloadSimple
                   size={windowWidth <= 608 ? 18 : 20}
                   weight="bold"
-                  color="#E8E8FD"
+                  color="#f8fafc"
                 />
               }
-              //For some reason, the color of the shadow is changing with shadow-color 
+              //For some reason, the color of the shadow is changing with shadow-color
               //property, is changing with the color of text
-              className="bg-blue-600 text-blue-700 hover:shadow-blue-700 duration-200 hover:shadow-shinny"
+              className={`${theme == "light"? "bg-blue-500 text-blue-600 hover:shadow-blue-600" : "bg-blue-600 text-blue-700 hover:shadow-blue-700"}  duration-200 hover:shadow-shinny`}
               content="Resume.pdf"
             />
             <div className="flex gap-4 mb6:gap-8 justify-evenly">
-              <a target="_blank" href="https://www.linkedin.com/in/joãopedroduarte" className="flex gap-1 transition-all items-center cursor-pointer duration-300 text-blue-500 hover:text-zinc-200">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/joãopedroduarte"
+                className={`${
+                  theme == "light" ? "hover:text-zinc-800 text-blue-600" : "hover:text-zinc-200 text-blue-500"
+                } flex gap-1 transition-all items-center cursor-pointer duration-300`}
+              >
                 <LinkedinLogo size={windowWidth <= 608 ? 22 : 26} />
-                <div className="mb4:text-lg font-medium text-base">Linkedin</div>
+                <div className="mb4:text-lg font-medium text-base">
+                  Linkedin
+                </div>
               </a>
-              <a href="https://github.com/joaopedrosduarte" target="_blank" className="flex gap-1 transition-all items-center cursor-pointer duration-300 fill-blue-500 hover:fill-zinc-200 text-blue-500 hover:text-zinc-200">
+              <a
+                href="https://github.com/joaopedrosduarte"
+                target="_blank"
+                className={`${
+                  theme == "light" ? "hover:text-zinc-800 hover:fill-zinc-800 fill-blue-600 text-blue-600" : "text-blue-500 fill-blue-500 hover:text-zinc-200 hover:fill-zinc-200"
+                } flex gap-1 transition-all items-center cursor-pointer duration-300 fill-blue-500 text-blue-500`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={windowWidth <= 608 ? "22" : "26"}

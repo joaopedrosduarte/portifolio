@@ -10,8 +10,7 @@ interface ButtonProps {
 
 }
 
-export default function HeroButton({ component, content, className = "", spanClassName="text-darkmode-maintext" }: ButtonProps) {
-  console.log(className)
+export default function HeroButton({ component, content, className = "", spanClassName="text-slate-50" }: ButtonProps) {
   return (
     <a href="src/static/cv.pdf" target="_blank" className={cn(className ,"cursor-pointer duration-200 px-4 py-3 transition-all justify-center items-center rounded-lg flex gap-2")}>
       <p className={cn(spanClassName, "font-medium mb4:text-base text-sm")}>

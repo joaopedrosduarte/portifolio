@@ -7,12 +7,18 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"lightbase": "#303036",
-				"darkbase": "#27272c",
+				"lightmode-lightbase": "#EDF1FB",
+				"lightmode-darkbase": "#E2E8F0",
+				"lightmode-bg": "#F9FAFB",
+				"lightmode-maintext": "#04052f",
+				"lightmode-auxiliartext": "#575f75",
+				"lightmode-lightgray": "#C4C9D4",
+				"darkmode-lightbase": "#303036",
+				"darkmode-darkbase": "#1D2333",
 				"darkmode-bg": "#16181D",
-				"lightgray": "#C4C9D4",
 				"darkmode-maintext": "#E8E8FD",
 				"darkmode-auxiliartext": "#C4C9D4",
+				"darkmode-lightgray": "#C4C9D4",
 			},
 			screens: {
 				'mb1': "416px",
@@ -26,7 +32,6 @@ export default {
 			boxShadow: {
 				'baseblured': "0px 0px 10px -1px",
 				'shinny': "0px 2px 40px -2px",
-				'base': "0px 0px 2px 1px rgba(0,0,0,0.3)",
 			},
 			animation: {
 				"loop-scroll": "loop-scroll 70s linear infinite",

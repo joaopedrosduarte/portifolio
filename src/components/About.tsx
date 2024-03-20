@@ -1,7 +1,10 @@
+import useTheme from "../hooks/useTheme";
+
 export default function About() {
+  const { theme } = useTheme();
 
   return (
-    <div className="flex max-h-fit justify-center items-center bg-darkbase">
+    <div className={`${theme == "light"? "bg-lightmode-lightbase" : "bg-darkmode-darkbase"} flex max-h-fit justify-center items-center`}>
       <div className="flex max-w-5xl flex-col items-center py-24 px-10">
         <div className="flex rg:flex-row gap-20 flex-col h-max">
           <div className="rg:flex hidden h-auto">
@@ -11,7 +14,7 @@ export default function About() {
               alt="pcfoto1"
             />
           </div>
-          <div className="flex flex-col gap-4 h-max text-darkmode-maintext text-lg">
+          <div className={`${theme == "light"? "text-lightmode-maintext" : "text-darkmode-maintext"} flex flex-col gap-4 h-max text-lg`}>
             <h1 className="pb-3 text-blue-500 font-bold text-[26px]">
               About me
             </h1>
