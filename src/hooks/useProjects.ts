@@ -6,7 +6,6 @@ export default function useProjects() {
   return useQuery({
     queryFn: async () => {
       const { data } = await GetMethods.GetProjects();
-      console.log(data)
       return data.data.projectPreviews as ProjectType[];
     },
   });
