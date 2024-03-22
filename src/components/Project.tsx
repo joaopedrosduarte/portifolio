@@ -15,8 +15,8 @@ export default function Project({
   theme,
   title,
   description,
-  ghLink,
-  liveLink,
+  githubUrl,
+  liveUrl,
   image,
   tools,
   projectHovered,
@@ -57,11 +57,13 @@ export default function Project({
       <div className="flex w-full flex-col gap-2">
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
           <a
-            href={liveLink}
+            href={liveUrl}
             target="_blank"
             className={`${
-              theme == "light" ? "text-zinc-700" : "text-darkmode-maintext"
-            } group/title hover:text-blue-500 flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
+              theme == "light"
+                ? "text-zinc-700 hover:text-blue-600"
+                : "hover:text-blue-500 text-darkmode-maintext"
+            } group/title flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
           >
             <h1>{title}</h1>
             <div className="flex pt-1">
@@ -72,15 +74,15 @@ export default function Project({
               />
             </div>
           </a>
-          <div className="hidden mb3:flex items-center hover:text-blue-500 transition-colors text-darkmode-maintext">
+          <div className="hidden mb3:flex items-center transition-colors text-darkmode-maintext">
             <a
-              href={ghLink}
+              href={githubUrl}
               target="_blank"
               className={`${
                 theme == "light"
-                  ? "text-lightmode-auxiliartext"
-                  : "text-darkmode-auxiliartext"
-              } hover:text-blue-500 duration-200 transition-colors flex items-center justify-center pt-1`}
+                  ? "text-lightmode-auxiliartext hover:text-blue-600"
+                  : "text-darkmode-auxiliartext hover:text-blue-500"
+              } duration-200 transition-colors flex items-center justify-center pt-1`}
             >
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
@@ -95,15 +97,15 @@ export default function Project({
           >
             {description}
           </span>
-          <div className="flex mb3:hidden items-center pt-1.5 pb-px hover:text-blue-500 transition-colors text-darkmode-maintext">
+          <div className="flex mb3:hidden items-center pt-1.5 pb-px transition-colors text-darkmode-maintext">
             <a
-              href={ghLink}
+              href={githubUrl}
               target="_blank"
               className={`${
                 theme == "light"
-                  ? "text-lightmode-auxiliartext"
-                  : "text-darkmode-auxiliartext"
-              } hover:text-blue-500 duration-200 transition-colors flex items-center justify-center pt-1`}
+                  ? "text-lightmode-auxiliartext hover:text-blue-600"
+                  : "text-darkmode-auxiliartext hover:text-blue-500"
+              } duration-200 transition-colors flex items-center justify-center pt-1`}
             >
               <GithubLogo weight="regular" size={18} className="pb-0.5" />
               <h1 className="font-normal text-base block">Github</h1>
@@ -112,7 +114,7 @@ export default function Project({
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {tools.map((tool) => (
-            <Tool theme={theme} key={tool} name={tool} />
+            <Tool theme={theme} key={tool.id} name={tool.name} />
           ))}
         </div>
       </div>
@@ -128,15 +130,15 @@ export default function Project({
     </div>
   ) : (
     <a
-      href={liveLink}
+      href={liveUrl}
       target="_blank"
       className={`${
-        isBlured ? "opacity-50" : ""
-      } flex scale-105 group w-full transition-all border-transparent
-      duration-200 gap-6 border-t p-8 rounded-lg flex-row
+        isBlured ? "opacity-45" : ""
+      } flex scale-105 group w-full transition-all border-transparent 
+      duration-200 gap-6 border-t p-8 rounded-lg flex-row 
     ${
       theme == "light"
-        ? "hover:bg-lightmode-lightbase/20 hover:border-t-lightmode-darkbase/40 hover:shadow-lightmode-darkbase/60 hover:shadow-md"
+        ? "hover:bg-zinc-200/10 hover:border-t-slate-200 hover:shadow-black/20 hover:shadow-md"
         : "hover:bg-darkmode-lightbase/20 hover:border-t-darkmode-lightbase/40 hover:shadow-black/10 hover:shadow-md"
     }`}
       onMouseLeave={() => handleMouseLeave()}
@@ -160,43 +162,47 @@ export default function Project({
       </div>
       <div className="flex w-full flex-col gap-2">
         <div className="flex flex-wrap gap-1.5 items-center justify-between">
-          <div
-            className={`${
-              linkHovered == "live"
-                ? "text-blue-500"
-                : theme == "light"
-                ? "text-zinc-700"
-                : "text-darkmode-maintext"
-            } flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
-          >
-            <h1>{title}</h1>
-            <div className="flex pt-1">
-              <ArrowUpRight
-                weight="bold"
-                className={`${
-                  linkHovered == "live" ? "translate-x-1 -translate-y-1" : ""
-                } transition-transform h-full`}
-                size={18}
-              />
-            </div>
-          </div>
-          <div
-            className={`${
-              theme == "light"
-                ? "text-lightmode-auxiliartext"
-                : "text-darkmode-auxiliartext"
-            } flex items-center hover:text-blue-500 transition-colors`}
-            onMouseEnter={() => setLinkHovered("github")}
-            onMouseLeave={() => setLinkHovered("live")}
-          >
-            <a
-              href={ghLink}
-              target="_blank"
-              className="flex items-center justify-center pt-1"
+          <div className="flex justify-between w-full">
+            <div
+              className={`${
+                linkHovered == "live"
+                  ? theme == "light"
+                    ? "text-zinc-700 group-hover:text-blue-500"
+                    : "text-darkmode-maintext group-hover:text-blue-500"
+                  : theme == "light"
+                    ? "text-zinc-700"
+                    : "text-darkmode-maintext"
+              } flex items-center gap-1 font-medium transition-colors duration-200 text-base leading-[22px]`}
             >
-              <GithubLogo weight="regular" size={18} className="pb-0.5" />
-              <h1 className="font-normal text-base block">Github</h1>
-            </a>
+              <h1>{title}</h1>
+              <div className="flex pt-1">
+                <ArrowUpRight
+                  weight="bold"
+                  className={`${
+                    linkHovered == "live" ? "translate-x-1 -translate-y-1" : ""
+                  } transition-transform h-full`}
+                  size={18}
+                />
+              </div>
+            </div>
+            <div
+              className={`${
+                theme == "light"
+                  ? "text-lightmode-auxiliartext hover:text-blue-600"
+                  : "text-darkmode-auxiliartext hover:text-blue-500"
+              } flex items-center transition-colors`}
+              onMouseEnter={() => setLinkHovered("github")}
+              onMouseLeave={() => setLinkHovered("live")}
+            >
+              <a
+                href={githubUrl}
+                target="_blank"
+                className="flex items-center justify-center pt-1"
+              >
+                <GithubLogo weight="regular" size={18} className="pb-0.5" />
+                <h1 className="font-normal text-base block">Github</h1>
+              </a>
+            </div>
           </div>
           <span
             className={`${
@@ -210,7 +216,7 @@ export default function Project({
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {tools.map((tool) => (
-            <Tool key={tool} theme={theme} name={tool} />
+            <Tool key={tool.id} theme={theme} name={tool.name} />
           ))}
         </div>
       </div>

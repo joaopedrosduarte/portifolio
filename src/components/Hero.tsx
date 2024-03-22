@@ -14,8 +14,8 @@ export default function Hero() {
             <span
               className={`${
                 theme == "light"
-                  ? "text-lightmode-auxiliartext"
-                  : "text-darkmode-auxiliartext"
+                  ? "text-blue-600"
+                  : "text-blue-500"
               } text-4xl leading-[4rem] font-semibold`}
             >
               Eae tudo certo? 👋🏼{" "}

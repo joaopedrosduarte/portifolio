@@ -1,4 +1,9 @@
-export default function ErrorComponent() {
+interface ErrorComponentProps {
+  error: unknown;
+}
+
+export default function ErrorComponent({ error }: ErrorComponentProps) {
+  console.log(error)
   return (
     <div className="flex flex-col px-auto py-[232px] px-10 w-full items-center justify-between">
       <div className="gap-4 w-full flex flex-col items-center justify-between">

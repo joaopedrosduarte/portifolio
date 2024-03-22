@@ -7,13 +7,6 @@ export default function About() {
     <div className={`${theme == "light"? "bg-lightmode-lightbase" : "bg-darkmode-darkbase"} flex max-h-fit justify-center items-center`}>
       <div className="flex max-w-5xl flex-col items-center py-24 px-10">
         <div className="flex rg:flex-row gap-20 flex-col h-max">
-          <div className="rg:flex hidden h-auto">
-            <img
-              src="/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg"
-              className="object-cover max-w-sm hidden rg:flex rounded-lg"
-              alt="pcfoto1"
-            />
-          </div>
           <div className={`${theme == "light"? "text-lightmode-maintext" : "text-darkmode-maintext"} flex flex-col gap-4 h-max text-lg`}>
             <h1 className="pb-3 text-blue-500 font-bold text-[26px]">
               About me
@@ -45,6 +38,13 @@ export default function About() {
               Atualmente procuro me especializar na área de cloud e automação, e
               no futuro me tornar um profissional indispensável para o mercado.
             </span>
+          </div>
+          <div className="rg:flex hidden h-auto">
+            <img
+              src="/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg"
+              className="object-cover max-w-sm hidden rg:flex rounded-lg"
+              alt="pcfoto1"
+            />
           </div>
         </div>
       </div>

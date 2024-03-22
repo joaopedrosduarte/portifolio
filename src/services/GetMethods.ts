@@ -2,7 +2,30 @@ import axios from "axios";
 
 class Get {
   GetProjects() {
-    return axios.get("http://localhost:3000/projects");
+    const headers = {
+      "content-type": "application/json",
+      "Authorization": `${import.meta.env.VITE_HYGRAPH_DEV_AUTH_TOKEN}`
+    };
+    return axios({
+      url: import.meta.env.VITE_HYGRAPH_ENDPOINT,
+      headers: headers,
+      method: "POST",
+      data: {
+        query: `query {
+        projectPreviews {
+          id
+          liveUrl
+          githubUrl
+          description
+          title
+          tools {
+            id
+            name
+          }
+        }
+      }`,
+      },
+    });
   }
 }
 

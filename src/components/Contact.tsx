@@ -10,8 +10,8 @@ export default function Contact() {
   
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex w-full flex-col max-w-5xl px-10 pb-52">
-        <div className="flex flex-col gap-2 pb-10 mb4:text-left text-center">
+      <div className="flex w-full flex-col max-w-5xl px-10 pt-28 pb-36 gap-16">
+        <div className="flex flex-col gap-2 mb4:text-left text-center">
           <h1 className="text-blue-500 font-bold text-[26px]">
             Contact
           </h1>
