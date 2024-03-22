@@ -4,7 +4,7 @@ class Get {
   GetProjects() {
     const headers = {
       "content-type": "application/json",
-      "Authorization": `${import.meta.env.VITE_HYGRAPH_DEV_AUTH_TOKEN}`
+      "Authorization": `Bearer ${import.meta.env.VITE_HYGRAPH_DEV_AUTH_TOKEN}`
     };
     return axios({
       url: import.meta.env.VITE_HYGRAPH_ENDPOINT,
