@@ -7,13 +7,13 @@ import { useState } from "react";
 import Project from "./Project";
 
 export default function Projects() {
-  const { data, isLoading, isError, isSuccess, error } = useProjects();
+  const { data, isLoading, isError, isSuccess } = useProjects();
   const [projectHovered, setProjectHovered] = useState("");
   const { theme } = useTheme();
 
   if (isLoading) return <LoadingComponent />;
 
-  if (isError) return <ErrorComponent error={error} />;
+  if (isError) return <ErrorComponent />;
 
   if (isSuccess && data.length === 0) return <EmptyComponent />;
 
