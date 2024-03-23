@@ -11,11 +11,11 @@ export default function Projects() {
   const [projectHovered, setProjectHovered] = useState("");
   const { theme } = useTheme();
 
-  if (isLoading) return <LoadingComponent />;
+  if (isLoading) return <LoadingComponent theme={theme} />;
 
-  if (isError) return <ErrorComponent />;
+  if (isError) return <ErrorComponent theme={theme} />;
 
-  if (isSuccess && data.length === 0) return <EmptyComponent />;
+  if (isSuccess && data.length === 0) return <EmptyComponent theme={theme} />;
 
   if (isSuccess) {
     return (
