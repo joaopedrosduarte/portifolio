@@ -1,7 +1,7 @@
 import ProjectSectionHeader from "./ProjectSectionHeader";
 import useProjects from "../hooks/useProjects";
 import LoadingComponent from "./LoadingComponent";
-import EmptyComponent from "./EmptyComponent";
+import EmptyComponent from "./NoProjectsComponent";
 import ErrorComponent from "./ErrorComponent";
 import useTheme from "../hooks/useTheme";
 import { useState } from "react";

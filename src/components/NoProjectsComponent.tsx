@@ -2,7 +2,7 @@ interface EmptyComponentProps {
   theme: string;
 }
 
-export default function EmptyComponent({ theme }: EmptyComponentProps) {
+export default function NoProjectsComponent({ theme }: EmptyComponentProps) {
   return (
     <div className="flex flex-col px-auto py-[120px] px-10 w-full items-center justify-between">
       <div className="gap-4 w-full flex flex-col items-center justify-between">
